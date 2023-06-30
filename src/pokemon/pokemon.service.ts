@@ -9,10 +9,14 @@ import { PokemonModule } from './pokemon.module';
 @Injectable()
 export class PokemonService {
 
+
+  
   constructor (
     @InjectModel(Pokemon.name)
     private readonly pokemonModel: Model<Pokemon>
   ) {}
+
+
 
   async create(createPokemonDto: CreatePokemonDto) {
     createPokemonDto.name = createPokemonDto.name.toLowerCase();
